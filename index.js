@@ -1,6 +1,11 @@
 const http = require('http')
 const fs= require("fs");
-//const { response } = require('express');
+
+
+
+
+
+
 let homecontent="";
 let filecontent="";
 let reg="";
@@ -21,6 +26,13 @@ fs.readFile("project.html",
    filecontent=fil;
 })
 
+
+
+
+
+
+
+
 fs.readFile("registration.html",
 (err,regf) => {
     if(err)
@@ -39,7 +51,7 @@ http.createServer((request,response) =>{
             response.write(filecontent)
             response.end();
             break
-        case "./registration":
+        case "/registration":
             response.write(reg)
             response.end();
             break;
